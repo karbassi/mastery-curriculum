@@ -41,8 +41,8 @@ For numbers, each number that's created:
 
 We can interact with these numbers in `irb`. Start `irb` from the console. Then, to call up a number:
 
-1. Type an instruction. In this case, we want to ask the program to read a number. So, we type `1`.
-2. Send your instruction to the program world by pressing 'Return'.
+* _**Type an instruction. In this case, we want to ask the program to read a number. So, we type `1`.**_
+* _**Send your instruction to the program world by pressing 'Return'.**_
 
 <details>
 <summary>See how I'd do this</summary>
@@ -75,8 +75,8 @@ Shortly after the Universe began, the moon and stars came into being. But, it wa
 
 Let's try to ask the program world for something non-existent. 
 
-* Start `irb` from the console. 
-* Then, try to ask for something called `one`.
+* _**Start `irb` from the console.**_
+* _**Then, try to ask for something called `one`.**_
 
 <details>
 <summary>See how I'd do this</summary>
@@ -92,7 +92,7 @@ Let's try to ask the program world for something non-existent.
 
 Ugh. That looks tricky. But let's take a minute to understand what the world's trying to tell us:
 
-<decompose error message>
+<image guide: decompose an error message>
 
 In short, the program world is saying "you asked for something called `one`. It doesn't exist, as far as I can see."
 
@@ -112,8 +112,8 @@ One way to give an object a name is to make a label for it, and attach the objec
 
 Let's try this out. 
 
-* Open `irb`, and give the symbol `1` another name: `one`. 
-* (_In other words_: define a variable `one` that points to the object `1`.) 
+* _**Open `irb`, and give the symbol `1` another name: `one`.**_
+* _**(_In other words_: define a variable `one` that points to the object `1`.)**_
 
 > In Ruby, we use `=` to point names at objects. It's called the **assignment operator**.
 
@@ -142,8 +142,8 @@ Let's ask the program world for the object pointed to by the variable `one`:
 
 Nice! Now over to you: define names for:
 
-- `2` through `10`, and 
-- as many numbers as you want until you get the point.
+- _**`2` through `10`, and**_
+- _**as many numbers as you want until you get the point.**_
 
 <details>
 <summary>See how I'd do this</summary>
@@ -193,7 +193,7 @@ We call an expression like `1 + 2` a **statement**. (We did a statement earlier,
 
 Since our variables `one` through `ten` (and possibly more) have already been defined, and point at the objects `1` through `10`, we should be able to get our numeral calculator working straight away.
 
-* Make the numeral calculator work.
+* _**Make the numeral calculator work.**_
 
 <details>
 <summary>See how I'd do it</summary>
