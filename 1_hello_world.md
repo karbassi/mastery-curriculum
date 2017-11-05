@@ -2,8 +2,10 @@
 
 Most programming guides will start like this
 
+```
 print “Hello World!”
 Hello World!
+```
 
 They’ll then introduce all the various parts you need to be able to program:
 
@@ -40,7 +42,7 @@ Todo added: Put the dog in the car
 And complete todos, with `todo complete Wash the dog`:
 
 ```
-Todo completed: Wash the car
+Todo completed: Wash the dog
 
 You have 2 Todos left to complete:
 * Wash the car
@@ -62,8 +64,8 @@ There are two things required to run a program: a computer, and some code.
 
 <show both>
 
-The code is a set instructions to the computer for how to set up a program.
-The computer is the machine in which this program lives and breathes.
+**The code** is a _set of instructions to the computer for how to set up a program_.
+**The computer** is the _machine in which this program lives and breathes_.
 
 When I think of a program, I think of a flat world, with things happening inside it. For instance, let’s start with a program we all know: Microsoft Word. When we click on the ‘W’ icon to open Word, the following world comes into being inside your computer:
 
@@ -75,7 +77,7 @@ These entities can interact with one another in set ways: we can save text to an
 
 The world is itself an entity: the main function, or entry point. It’s like the Universe: although everything that exists does so within the Universe, the Universe is itself a thing. It’s conceivable that some higher power could ‘exit the Universe’: with pretty catastrophic results for all us entities within it.
 
-Ruby is a language for writing code – setting up a program, or world – and it’s also an environment in which that world can exist. Whenever we run a Ruby program, we set up a main function, and a bunch of other things too. For the next few chapters, we’ll be using a special kind of Ruby program called a REPL (or ‘Read–Evaluate–Print Loop’). When we run this program, we set up the Ruby world, and we get the ability to write Ruby code to modify that world on-the-fly.
+Ruby is a language for writing code – setting up a program, or world – and it’s also an environment in which that world can exist. Whenever we run a Ruby program, we set up a main function, and a bunch of other things too. For the next few chapters, we’ll be using a special kind of Ruby program called a **REPL (or ‘Read–Evaluate–Print Loop’)**. When we run this program, we set up the Ruby world, and we get the ability to write Ruby code to modify that world on-the-fly.
 
 You can start the Ruby world by typing `irb` from the console. `irb` stands for ‘interactive Ruby’.
 
