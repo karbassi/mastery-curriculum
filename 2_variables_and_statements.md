@@ -23,7 +23,7 @@ You might think this world starts off empty: but it doesn't.
 
 When the Universe began, the great computer in the sky ran a 'Universe' program, and created the Universe. It also created some denizens for that Universe: the moon and stars. 
 
-When our computer sets up a Ruby world, it creates a Universe ('main program function'), and it adds a bunch of useful denizens to it. In Ruby, we call these denizens 'objects'. One good example of such a 'pre-created' object are _integers_(1).
+When our computer sets up a Ruby world, it creates a Universe ('main program function'), and it adds a bunch of useful denizens to it. In Ruby, we call these denizens 'objects'. One good example of such a 'pre-created' object are _numbers_.
 
 <gif demonstarting program starting and some numbers coming into existence: zoom in on the numbers to show they exist>
 
@@ -150,4 +150,4 @@ Since our variables `one` through `ten` (and possibly more) have already been de
 => 3
 ```
 
-> (1) There's a slight lie here. Integers aren't actually created at the same time as the main program function. In fact, an underlying function is created. When we type `100`, that function is executed in such a way as to produce the number 100 in the world on-the-fly. It's a small distinction: but this kind of on-the-fly generation is a way to avoid slow program start-up, where the program has to generate loads of numbers before it can show the prompt. The reason we're not mentioning it here is because this function isn't actually a Ruby function: it's a C function, which Ruby calls. You can learn more [here](https://stackoverflow.com/questions/3430280/how-does-object-id-assignment-work).
+> I've lied a bit about how numbers work in Ruby. Numbers aren't actually created at the same time as the main program function. In reality, an smaller, sub-world (a 'function') is created. When we type `100`, that function is executed in such a way as to return the number 100 to the world on-the-fly. It's a small distinction: but why does Ruby do this klind of on-the-fly generation? The answer is: this is a way to avoid slow program start-up, where the program has to generate loads of numbers before it can show the prompt. The reason we're not covering this in detail here is because this function isn't actually a Ruby function: it's a C function, which Ruby executes. You can learn more [here](https://stackoverflow.com/questions/3430280/how-does-object-id-assignment-work) if you're interested.
