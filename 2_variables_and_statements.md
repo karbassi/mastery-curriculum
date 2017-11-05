@@ -46,11 +46,12 @@ We can interact with these numbers in `irb`. Start `irb` from the console. Then,
 
 <details>
 <summary>See how I'd do this</summary>
-```irb
+<code>
 > 1
 => 1
-```
+</code>
 </details>
+
 
 > This 'type your instruction' followed by 'send your instruction to the program world' pattern is the basis on which all coding happens.
 
@@ -81,6 +82,7 @@ Let's try to ask the program world for something non-existent.
 => NameError: undefined local variable or method `one' for main:Object
 ```
 </details>
+
 
 Ugh. That looks tricky. But let's take a minute to understand what the world's trying to tell us:
 
@@ -117,6 +119,7 @@ Let's try this out.
 ```
 </details>
 
+
 Whenever we ask the program world for the variable `one`, it will return the object that variable is pointing at:
 
 <gif of asking the program world for a variable and grabbing the object via the pointer. Use 'bound' lines to differentiate from flow-of-information>
@@ -145,6 +148,7 @@ Nice! Now over to you: define names for:
 ...and so on
 ```
 </details>
+
 
 ## Making objects interact
 
@@ -180,7 +184,7 @@ Since our variables `one` through `ten` (and possibly more) have already been de
 * Make the numeral calculator work.
 
 <details>
-  <summary>See how I'd do it</summary>
+<summary>See how I'd do it</summary>
 ```irb
 > one + two
 => 3
@@ -188,5 +192,6 @@ Since our variables `one` through `ten` (and possibly more) have already been de
 => 20
 ```
 </details>
+
 
 > I've lied a bit about how numbers work in Ruby. Numbers aren't actually created at the same time as the main program function. In reality, an smaller, sub-world (a 'function') is created. When we type `100`, that function is executed in such a way as to return the number 100 to the world on-the-fly. It's a small distinction: but why does Ruby do this klind of on-the-fly generation? The answer is: this is a way to avoid slow program start-up, where the program has to generate loads of numbers before it can show the prompt. The reason we're not covering this in detail here is because this function isn't actually a Ruby function: it's a C function, which Ruby executes. You can learn more [here](https://stackoverflow.com/questions/3430280/how-does-object-id-assignment-work) if you're interested.
