@@ -58,7 +58,8 @@ Although we’re going to build your understanding of programming in a different
 
 The difference for us is that we’re actually going to introduce a World, of sorts, in this chapter. So we really are saying, ‘Hello World!’
 
-## Programs are worlds
+
+## Programs are worlds
 
 There are two things required to run a program: a computer, and some code.
 
@@ -84,10 +85,10 @@ You can start the Ruby world by typing `irb` from the console. `irb` stands for 
 * _**Start an interactive Ruby program using `irb`.**_
 
 <details>
-  <summary></summary>
+  <summary>See how I'd do it</summary>
   <p>
     
-```bash
+```
 $> irb
  > # you can type Ruby code here, and it’ll run instantly. :)
 ```
