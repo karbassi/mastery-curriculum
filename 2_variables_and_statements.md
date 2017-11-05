@@ -54,7 +54,7 @@ We can interact with these numbers in `irb`. Start `irb` from the console. Then,
 ```
 </p>
 </details>
-
+<p></p>
 
 > This 'type your instruction' followed by 'send your instruction to the program world' pattern is the basis on which all coding happens.
 
@@ -88,7 +88,7 @@ Let's try to ask the program world for something non-existent.
 ```
 </p>
 </details>
-
+<p></p>
 
 Ugh. That looks tricky. But let's take a minute to understand what the world's trying to tell us:
 
@@ -127,7 +127,7 @@ Let's try this out.
 ```
 </p>
 </details>
-
+<p></p>
 
 Whenever we ask the program world for the variable `one`, it will return the object that variable is pointing at:
 
@@ -160,7 +160,7 @@ Nice! Now over to you: define names for:
 ```
 </p>
 </details>
-
+<p></p>
 
 ## Making objects interact
 
@@ -198,7 +198,7 @@ Since our variables `one` through `ten` (and possibly more) have already been de
 <details>
 <summary>See how I'd do it</summary>
 <p>
-  
+
 ```irb
 > one + two
 => 3
@@ -207,6 +207,7 @@ Since our variables `one` through `ten` (and possibly more) have already been de
 ```
 </p>
 </details>
+<p></p>
 
 
 > I've lied a bit about how numbers work in Ruby. Numbers aren't actually created at the same time as the main program function. In reality, an smaller, sub-world (a 'function') is created. When we type `100`, that function is executed in such a way as to return the number 100 to the world on-the-fly. It's a small distinction: but why does Ruby do this klind of on-the-fly generation? The answer is: this is a way to avoid slow program start-up, where the program has to generate loads of numbers before it can show the prompt. The reason we're not covering this in detail here is because this function isn't actually a Ruby function: it's a C function, which Ruby executes. You can learn more [here](https://stackoverflow.com/questions/3430280/how-does-object-id-assignment-work) if you're interested.
