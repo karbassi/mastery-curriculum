@@ -46,10 +46,12 @@ We can interact with these numbers in `irb`. Start `irb` from the console. Then,
 
 <details>
 <summary>See how I'd do this</summary>
-<code>
+<p>
+```irb
 > 1
 => 1
-</code>
+```
+</p>
 </details>
 
 
@@ -77,10 +79,12 @@ Let's try to ask the program world for something non-existent.
 
 <details>
 <summary>See how I'd do this</summary>
+<p>
 ```irb
 > one
 => NameError: undefined local variable or method `one' for main:Object
 ```
+</p>
 </details>
 
 
@@ -113,10 +117,12 @@ Let's try this out.
 
 <details>
 <summary>See how I'd do this</summary>
+<p>
 ```irb
 > one = 1
 => 1
 ```
+</p>
 </details>
 
 
@@ -137,7 +143,8 @@ Nice! Now over to you: define names for:
 - as many numbers as you want until you get the point.
 
 <details>
-  <summary>See how I'd do this</summary>
+<summary>See how I'd do this</summary>
+<p>
 ```irb
 > one = 1
 => 1
@@ -147,6 +154,7 @@ Nice! Now over to you: define names for:
 => 3
 ...and so on
 ```
+</p>
 </details>
 
 
@@ -185,12 +193,14 @@ Since our variables `one` through `ten` (and possibly more) have already been de
 
 <details>
 <summary>See how I'd do it</summary>
+<p>
 ```irb
 > one + two
 => 3
 > four * five
 => 20
 ```
+</p>
 </details>
 
 
