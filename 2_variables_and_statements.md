@@ -46,12 +46,11 @@ We can interact with these numbers in `irb`. Start `irb` from the console. Then,
 
 <details>
 <summary>See how I'd do this</summary>
-<p>
+
 ```irb
 > 1
 => 1
 ```
-</p>
 </details>
 
 
@@ -80,6 +79,7 @@ Let's try to ask the program world for something non-existent.
 <details>
 <summary>See how I'd do this</summary>
 <p>
+  
 ```irb
 > one
 => NameError: undefined local variable or method `one' for main:Object
