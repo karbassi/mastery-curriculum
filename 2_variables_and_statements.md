@@ -4,9 +4,9 @@
 
 We're going to build a numeral calculator. It'll work just like a normal calculator, except we'll be able to use numerals (English words representing numbers) to do basic maths. Something like this:
 
-```
-> one + one
-=> 2
+```irb
+> one + two
+=> 3
 > four * five
 => 20
 ```
@@ -41,19 +41,22 @@ For numbers, each number that's created:
 
 We can interact with these numbers in `irb`. Start `irb` from the console. Then, to call up a number:
 
-1. Type an instruction. In this case, we want to ask the program to read a number. So, we type `100`.
+1. Type an instruction. In this case, we want to ask the program to read a number. So, we type `1`.
 2. Send your instruction to the program world by pressing 'Return'.
 
-```
+<details>
+<summary>See how I'd do this</summary>
+```irb
 > 1
 => 1
 ```
+</details>
 
 > This 'type your instruction' followed by 'send your instruction to the program world' pattern is the basis on which all coding happens.
 
-We can try again with another number:
+Let's try this again with another number:
 
-```
+```irb
 > 2
 => 2
 ```
@@ -66,12 +69,18 @@ What just happened? We went into the program world, and asked for the number 2. 
 
 Shortly after the Universe began, the moon and stars came into being. But, it was a while before trees, dogs, human beings and cars showed up. What _doesn't_ exist when a program world is created?
 
-Let's try to ask the program world for something non-existent. Start `irb` from the console. Then, let's try to ask for something called `one`:
+Let's try to ask the program world for something non-existent. 
 
-```
+* Start `irb` from the console. 
+* Then, try to ask for something called `one`.
+
+<details>
+<summary>See how I'd do this</summary>
+```irb
 > one
 => NameError: undefined local variable or method `one' for main:Object
 ```
+</details>
 
 Ugh. That looks tricky. But let's take a minute to understand what the world's trying to tell us:
 
@@ -85,26 +94,36 @@ Bad news for them, then: that's exactly what we want to do. To do it, we're goin
 
 ## Giving names to things
 
-Since a Ruby program is your own Universe, you get to choose what things are called. In fact, this is often considered the main responsibility of a programmer: to give things sensible and meaningful names, so other users of the world (including other programmers) can manipulate the world without becoming confused by what things are. A lot of wasted programming time can be traced down to choosing a bad name for a new object in a program world.
+Since a Ruby program is your own Universe, you get to choose what things are called. This is called **naming**. 
+
+> Naming is a big responsibility for a programmer. It's hard to give things sensible and meaningful names, so other users of the world (including other programmers) can manipulate the world without becoming confused by what things are. A lot of wasted programming time can be traced down to choosing a bad name for a new object in a program world.
 
 One way to give an object a name is to make a label for it, and attach the object to that label. These labels are called **variables**, and the process of attachment is called **assignment**.
 
 <gif of setting a variable as a pointer>
 
-Let's try this out. Open `irb`, and give the symbol `1` another name: `one`. That is: define a variable `one` that points to the object `1`.
+Let's try this out. 
 
-```
+* Open `irb`, and give the symbol `1` another name: `one`. 
+* (_In other words_: define a variable `one` that points to the object `1`.) 
+
+> In Ruby, we use `=` to point names at objects. It's called the **assignment operator**.
+
+<details>
+<summary>See how I'd do this</summary>
+```irb
 > one = 1
 => 1
 ```
+</details>
 
 Whenever we ask the program world for the variable `one`, it will return the object that variable is pointing at:
 
 <gif of asking the program world for a variable and grabbing the object via the pointer. Use 'bound' lines to differentiate from flow-of-information>
 
-Let's ask the program world for the variable `one`:
+Let's ask the program world for the object pointed to by the variable `one`:
 
-```
+```irb
 > one
 => 1
 ```
@@ -113,6 +132,19 @@ Nice! Now over to you: define names for:
 
 - `2` through `10`, and 
 - as many numbers as you want until you get the point.
+
+<details>
+  <summary>See how I'd do this</summary>
+```irb
+> one = 1
+=> 1
+> two = 2
+=> 2
+> three = 3
+=> 3
+...and so on
+```
+</details>
 
 ## Making objects interact
 
@@ -143,11 +175,18 @@ Here's the above, visually:
 
 We call an expression like `1 + 2` a **statement**. (We did a statement earlier, too: `one = 1` is a statement).
 
-Since our variables `one` through `ten` (and possibly more) have already been defined, and point at the objects `1` through `10`, we should be able to get our calculator working straight away:
+Since our variables `one` through `ten` (and possibly more) have already been defined, and point at the objects `1` through `10`, we should be able to get our numeral calculator working straight away.
 
-```
+* Make the numeral calculator work.
+
+<details>
+  <summary>See how I'd do it</summary>
+```irb
 > one + two
 => 3
+> four * five
+=> 20
 ```
+</details>
 
 > I've lied a bit about how numbers work in Ruby. Numbers aren't actually created at the same time as the main program function. In reality, an smaller, sub-world (a 'function') is created. When we type `100`, that function is executed in such a way as to return the number 100 to the world on-the-fly. It's a small distinction: but why does Ruby do this klind of on-the-fly generation? The answer is: this is a way to avoid slow program start-up, where the program has to generate loads of numbers before it can show the prompt. The reason we're not covering this in detail here is because this function isn't actually a Ruby function: it's a C function, which Ruby executes. You can learn more [here](https://stackoverflow.com/questions/3430280/how-does-object-id-assignment-work) if you're interested.
