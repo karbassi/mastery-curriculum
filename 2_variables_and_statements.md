@@ -46,11 +46,13 @@ We can interact with these numbers in `irb`. Start `irb` from the console. Then,
 
 <details>
 <summary>See how I'd do this</summary>
+<p>
 
 ```irb
 > 1
 => 1
 ```
+</p>
 </details>
 
 
@@ -118,6 +120,7 @@ Let's try this out.
 <details>
 <summary>See how I'd do this</summary>
 <p>
+
 ```irb
 > one = 1
 => 1
@@ -145,6 +148,7 @@ Nice! Now over to you: define names for:
 <details>
 <summary>See how I'd do this</summary>
 <p>
+
 ```irb
 > one = 1
 => 1
@@ -194,6 +198,7 @@ Since our variables `one` through `ten` (and possibly more) have already been de
 <details>
 <summary>See how I'd do it</summary>
 <p>
+  
 ```irb
 > one + two
 => 3
