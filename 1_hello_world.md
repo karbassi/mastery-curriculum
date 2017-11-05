@@ -81,7 +81,17 @@ Ruby is a language for writing code – setting up a program, or world – and i
 
 You can start the Ruby world by typing `irb` from the console. `irb` stands for ‘interactive Ruby’.
 
+* _**Start an interactive Ruby program using `irb`.**_
+
+<details>
+  <summary></summary>
+  <p>
+    
+```bash
+$> irb
+ > # you can type Ruby code here, and it’ll run instantly. :)
 ```
-> irb
-> # you can type Ruby code here, and it’ll run instantly. :)
-```
+  </p>
+</details>
+<p></p>
+
