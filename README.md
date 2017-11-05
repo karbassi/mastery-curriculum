@@ -33,6 +33,7 @@ There's usually some code to execute in here. You can't generally copy-paste it 
 1. [Hello World](./1_hello_world.md)
 1. [Variables and Statements](./2_variables_and_statements.md)
 1. [Other Objects](./3_other_objects.md) :construction:
-1. [Arrays](./4_arraysd.md) :construction:
+1. [Arrays](./4_arrays.md) :construction:
 1. [Procedures](./5_procedures.md) :construction:
-1. [Classes](./6_classes.md) :construction:
+1. [Conditionals](./6_conditionals.md) :construction:
+1. [Classes](./7_classes.md) :construction:
