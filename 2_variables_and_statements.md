@@ -96,9 +96,9 @@ Ugh. That looks tricky. But let's take a minute to understand what the world's t
 
 In short, the program world is saying "you asked for something called `one`. It doesn't exist, as far as I can see."
 
-So why does `1` exist and `one` doesn't? This is a choice the creators of Ruby made. They believed that plenty of people would want to use numbers using the **symbol** (or 'glyph') `1` (or `2`, `3`, and so on). They believed that few people would want to use the numeral form `one` (or `two`, `three` and so on).
+So why does `1` exist and `one` doesn't? This is a choice the creators of Ruby made. They believed that plenty of people would want to use numbers using the [glyph](https://en.wikipedia.org/wiki/Glyph) form `1` (or `2`, `3`, and so on). They believed that few people would want to use the numeral form `one` (or `two`, `three` and so on).
 
-Bad news for them, then: that's exactly what we want to do. To do it, we're going to have to create something inside our program world: a **name**. Then, we're going to point our name to the number symbols that already exist.
+Bad news for them, then: that's exactly what we want to do. To do it, we're going to have to create something inside our program world: a **name**. Then, we're going to point our name to the number object that already exists.
 
 ## Giving names to things
 
@@ -112,8 +112,8 @@ One way to give an object a name is to make a label for it, and attach the objec
 
 Let's try this out. 
 
-* _**Open `irb`, and give the symbol `1` another name: `one`.**_
-* _**(_In other words_: define a variable `one` that points to the object `1`.)**_
+* _**Open `irb`, and give the object `1` another name: `one`.**_
+* _**(_In other words_: define a variable `one` that points to the object referenced by the name `1`.)**_
 
 > In Ruby, we use `=` to point names at objects. It's called the **assignment operator**.
 
@@ -178,11 +178,11 @@ Here's an example of that in action in `irb`:
 
 In the case above, here's what's happening. The computer executes the code `1 + 1` character-by-character:
 
-- The program world fetches the object referenced by the symbol `1`.
-- The program world asks `1` if it understands what `+` is. 
-- `1` says "yes, it means 'add whatever comes after'".
-- The program world fetches the object referenced by the symbol `2`.
-- The first `1` adds the `2` to itself. The result is returned to the program world.
+- The program world fetches the object referenced by the name `1`.
+- The program world asks the object referenced by `1` if it understands what `+` is. 
+- the object referenced by `1` says "yes, it means 'add the value of whatever number object comes after'".
+- The program world fetches the object referenced by the name `2`.
+- The first object referenced by `1` adds the value of the object referenced by `2` to itself. The result is returned to the program world.
 - The program world returns the result to the user: `3`.
 
 Here's the above, visually:
