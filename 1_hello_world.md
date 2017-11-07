@@ -76,9 +76,16 @@ These entities can interact with one another in set ways: we can save text to an
 
 <microsoft word gif demonstrating interaction above>
 
-The world is itself an entity: the main function, or entry point. It’s like the Universe: although everything that exists does so within the Universe, the Universe is itself a thing. It’s conceivable that some higher power could ‘exit the Universe’: with pretty catastrophic results for all us entities within it.
+The world is itself an entity: in Ruby, it's called the 'main Object'. It’s like the Universe: although everything that exists does so within the Universe, the Universe is itself a thing. It’s conceivable that some higher power could ‘exit the Universe’: with pretty catastrophic results for all us entities within it.
 
-Ruby is a language for writing code – setting up a program, or world – and it’s also an environment in which that world can exist. Whenever we run a Ruby program, we set up a main function, and a bunch of other things too. For the next few chapters, we’ll be using a special kind of Ruby program called a **REPL (or ‘Read–Evaluate–Print Loop’)**. When we run this program, we set up the Ruby world, and we get the ability to write Ruby code to modify that world on-the-fly.
+Ruby is a language for writing code – setting up a program, or world – and it’s also an environment in which that world can exist. Whenever we run a Ruby program, we set up a main function, and a bunch of other things too. For the next few chapters, we’ll be using a special kind of Ruby program called a **REPL (or ‘Read–Evaluate–Print Loop’)**. When we run a REPL program, we:
+
+1. set up the Ruby world, and 
+2. we get the ability to write Ruby code to modify that world on-the-fly.
+
+You could think (2) as being an 'interactive window' into the program world. It looks like this:
+
+<irb screenshot>
 
 You can start the Ruby world by typing `irb` from the console. `irb` stands for ‘interactive Ruby’.
 
@@ -95,4 +102,10 @@ $> irb
   </p>
 </details>
 <p></p>
+
+## Destroying worlds
+
+In `irb`, we can type `exit` and hit return, to close the program. What happens to our world? It disappears: everything that ever existed inside it is gone. When you next run the REPL program `irb`, you'll get a brand-new world.
+
+
 
