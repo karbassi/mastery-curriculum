@@ -72,22 +72,37 @@ When I think of a program, I think of a flat world, with things happening inside
 
 <microsoft word gif (with entities)>
 
-These entities can interact with one another in set ways: we can save text to and load text from files, for instance. We can move our cursor around the text we have loaded into the world right now. And, of course, we can exit the program – which destroys the world.
+This world contains objects. In Microsoft Word, some obvious examples of these objects might be things we can see:
+
+- bits of text
+- buttons that make text bold or italic
+- the cursor
+
+Some less-obvious examples might be:
+
+- files that are open right now
+- something tracking changes in the document so you can Undo and Redo
+
+These objects, obvious and non-obvious, can interact with one another in set ways: we can save text to and load text from files, for instance. We can move our cursor around the text we have loaded into the world right now. And, of course, we can exit the program – which destroys the world.
 
 <microsoft word gif demonstrating interaction above>
 
-The world is itself an entity: in Ruby, it's called the 'main Object'. It’s like the Universe: although everything that exists does so within the Universe, the Universe is itself a thing. It’s conceivable that some higher power could ‘exit the Universe’: with pretty catastrophic results for all us entities within it.
+Moreover, the world is _itself_ an object: in Ruby, it's called the 'main Object'. It’s like our real-life Universe: although everything that exists does so within the Universe, the Universe is itself a thing. It’s conceivable that some higher power could ‘exit the Universe’: with pretty catastrophic results for all us objects within it.
 
-Ruby is a language for writing code – setting up a program, or world – and it’s also an environment in which that world can exist. Whenever we run a Ruby program, we set up a main function, and a bunch of other things too. For the next few chapters, we’ll be using a special kind of Ruby program called a **REPL (or ‘Read–Evaluate–Print Loop’)**. When we run a REPL program, we:
+Ruby is a language for writing code – setting up a program, or world – and it’s also an environment in which that world can exist. Whenever we run a Ruby program, we set up a main object, and a bunch of other objects too. For the next few chapters, we’ll be exploring these objects, who they are, and how they work, using a special kind of Ruby program called a **REPL (or ‘Read–Evaluate–Print Loop’)**. 
+
+When we run a REPL program, we:
 
 1. set up the Ruby world, and 
 2. we get the ability to write Ruby code to modify that world on-the-fly.
 
-You could think (2) as being an 'interactive window' into the program world. It looks like this:
+You could think (2) as being an 'interactive window' into the program world. You are given a 'prompt', which waits for you to type instructions for the Ruby world. The main Ruby prompt is called **IRB**. It looks like this:
 
-<irb screenshot>
+![An IRB prompt](./images/1-irb.jpg)
 
-You can start the Ruby world by typing `irb` from the console. `irb` stands for ‘interactive Ruby’.
+> IRB stands for ‘interactive Ruby’.
+
+You can start the Ruby world and the REPL by typing `irb` from the console, and executing with Return. 
 
 * _**Start an interactive Ruby program using `irb`.**_
 
@@ -97,8 +112,11 @@ You can start the Ruby world by typing `irb` from the console. `irb` stands for 
     
 ```
 $> irb
- > # you can type Ruby code here, and it’ll run instantly. :)
+ >
 ```
+
+> In code examples, I'll include the prompt as a chevron ('`>`'). You don't need to enter the chevron into your IRB. If I'm typing in the console (Terminal), rather than in IRB, I'll include the prompt as a dollar-chevron `$>`. Again, you don't need to enter the chevron into IRB.
+
   </p>
 </details>
 <p></p>
