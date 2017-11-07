@@ -61,14 +61,16 @@ The difference for us is that we’re actually going to introduce a World, of so
 
 ## Programs are worlds
 
-There are two things required to run a program: a computer, and some code.
+There are two things required to run a program: a machine, and some code.
 
-![A computer and some code, side-by-side](./images/1-1.jpg)
+![A machine and some code, side-by-side](./images/1-1.jpg)
 
-**The code** is a _set of instructions to the computer for how to set up a program_.
-**The computer** is the _machine in which this program lives and breathes_.
+* **The code** is a _set of instructions to the machine for how to set up a program_.
+* **The machine** is the _place in which this program lives and breathes_. Computers are machines.
 
-When I think of a program, I think of a flat world, with things happening inside it. For instance, let’s start with a program we all know: Microsoft Word. When we click on the ‘W’ icon to open Word, the following world comes into being inside your computer:
+When I think of a program, I think of a flat world, with things happening inside it. Objects live in this world. 
+
+For instance, let’s start with a program we all know: Microsoft Word. When we click on the ‘W’ icon to open Word, the following world comes into being inside your computer:
 
 <microsoft word gif (with entities)>
 

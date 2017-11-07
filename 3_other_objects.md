@@ -8,7 +8,7 @@ In [module 2](./2_variables_and_statements.md), we saw that numbers were ready a
 
 Numbers are one thing, but what other objects pre-exist in this world? And how do they come into being?
 
-## _Constants_ don't change
+## `CONSTANTS` don't change
 
 Some objects never change. In Ruby, we call these objects **Constants**. Constants are like regular names, with one exception: once we've assigned them, we can't assign them again.
 
@@ -29,7 +29,7 @@ When we start the program world, some constants come into existence automaticall
 </details>
 <p></p>
 
-## _Classes_ are gods
+## `Classes` are gods
 
 Before there were numbers, there were the gods. Just like in our (depending on disposition) universe, these gods were responsible for creating all the objects that exist. And, they continue to be the main mechanism whereby new objects come into existence. Each god is responsible for creating a certain kind of object: 'their' object.
 
