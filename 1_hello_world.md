@@ -63,7 +63,7 @@ The difference for us is that we’re actually going to introduce a World, of so
 
 There are two things required to run a program: a computer, and some code.
 
-<show both>
+![A computer and some code, side-by-side](./images/1-1.jpg)
 
 **The code** is a _set of instructions to the computer for how to set up a program_.
 **The computer** is the _machine in which this program lives and breathes_.
