@@ -35,7 +35,7 @@ Every object that's created:
 For numbers, each number that's created:
 
 * Knows how much it's worth, and
-* Knows how to interact with other objects (especially numbers).
+* Knows how to interact with other objects (especially other numbers).
 
 <gif demonstrating numbers linking to other numbers to interact. Use 'flow of information' lines to differentiate from pointers>
 
@@ -179,7 +179,7 @@ Here's an example of that in action in `irb`:
 In the case above, here's what's happening. The computer executes the code `1 + 1` character-by-character:
 
 - The program world fetches the object referenced by the name `1`.
-- The program world asks the object referenced by `1` if it understands what `+` is. 
+- The program world asks the object referenced by `1` if it understands the message `+`. 
 - the object referenced by `1` says "yes, it means 'add the value of whatever number object comes after'".
 - The program world fetches the object referenced by the name `2`.
 - The first object referenced by `1` adds the value of the object referenced by `2` to itself. The result is returned to the program world.
