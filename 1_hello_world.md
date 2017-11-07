@@ -115,7 +115,7 @@ $> irb
  >
 ```
 
-> In code examples, I'll include the prompt as a chevron ('`>`'). You don't need to enter the chevron into your IRB. If I'm typing in the console (Terminal), rather than in IRB, I'll include the prompt as a dollar-chevron `$>`. Again, you don't need to enter the chevron into IRB.
+> In code examples, I'll include the IRB prompt as a chevron ('`>`'). You don't need to enter the chevron into your IRB. If I'm typing in the console (Terminal), rather than in IRB, I'll include the prompt as a dollar-chevron `$>`. Again, you don't need to enter the dollar-chevron into the console.
 
   </p>
 </details>
@@ -125,5 +125,5 @@ $> irb
 
 In `irb`, we can type `exit` and hit return, to close the program. What happens to our world? It disappears: everything that ever existed inside it is gone. When you next run the REPL program `irb`, you'll get a brand-new world.
 
-
+[Next module](./2_variables_and_statements.md)
 
