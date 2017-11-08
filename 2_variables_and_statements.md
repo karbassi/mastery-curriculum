@@ -15,7 +15,7 @@ We're going to build a numeral calculator. It'll work just like a normal calcula
 
 We know now that typing `irb` into the console starts a REPL: the computer sets up a Ruby world, and we, the user, get the ability to write Ruby code to modify that world on-the-fly.
 
-![](./images/2-irb-world.gif)
+![A user starting IRB in the terminal, causing a world to come into existence with a window as the 'REPL'](./images/2-irb-world.gif)
 
 You might think this world starts off empty: but it doesn't.
 
@@ -25,7 +25,7 @@ When the Universe began, the great computer in the sky ran a 'Universe' program,
 
 When our computer sets up a Ruby world, it creates a Universe ('main program function'), and it adds a bunch of useful denizens to it. In Ruby, we call these denizens 'objects'. One good example of such a 'pre-created' object are _numbers_.
 
-<gif demonstarting program starting and some numbers coming into existence: zoom in on the numbers to show they exist>
+![Animation showing the number objects being created on startup](./images/2-numbers.gif)
 
 Every object that's created:
 
