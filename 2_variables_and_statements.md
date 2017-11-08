@@ -92,7 +92,7 @@ Let's try to ask the program world for something non-existent.
 
 Ugh. That looks tricky. But let's take a minute to understand what the world's trying to tell us:
 
-<image guide: decompose an error message>
+![An error message, decomposed as a quote](./images/2-decomposing-error.jpg)
 
 In short, the program world is saying "you asked for something called `one`. It doesn't exist, as far as I can see."
 
