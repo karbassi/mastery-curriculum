@@ -89,7 +89,7 @@ Some less-obvious examples might be:
 
 These objects, obvious and non-obvious, can interact with one another in set ways: we can save text to and load text from files, for instance. We can move our cursor around the text we have loaded into the world right now. And, of course, we can exit the program – which destroys the world.
 
-<microsoft word gif demonstrating interaction above>
+![The Word world being interacted with: saving, moving the cursor, and exiting the program](./images/1-word-interactions.gif)
 
 Moreover, the world is _itself_ an object: in Ruby, it's called the 'main Object'. It’s like our real-life Universe: although everything that exists does so within the Universe, the Universe is itself a thing. It’s conceivable that some higher power could ‘exit the Universe’: with pretty catastrophic results for all us objects within it.
 
