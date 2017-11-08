@@ -131,7 +131,7 @@ Let's try this out.
 
 Whenever we ask the program world for the variable `one`, it will return the object that variable is pointing at:
 
-<gif of asking the program world for a variable and grabbing the object via the pointer. Use 'bound' lines to differentiate from flow-of-information>
+![Asking the program world for a variable, and the world retrieving the object via pointer](./images/2-retrieving-object-by-variable.gif)
 
 Let's ask the program world for the object pointed to by the variable `one`:
 
