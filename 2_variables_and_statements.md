@@ -15,7 +15,7 @@ We're going to build a numeral calculator. It'll work just like a normal calcula
 
 We know now that typing `irb` into the console starts a REPL: the computer sets up a Ruby world, and we, the user, get the ability to write Ruby code to modify that world on-the-fly.
 
-<gif demonstrating typing `irb` and getting a world>
+![](./images/2-irb-world.gif)
 
 You might think this world starts off empty: but it doesn't.
 
