@@ -37,7 +37,7 @@ For numbers, each number that's created:
 * Knows how much it's worth, and
 * Knows how to interact with other objects (especially other numbers).
 
-<gif demonstrating numbers linking to other numbers to interact. Use 'flow of information' lines to differentiate from pointers>
+![Numbers interacting inside a program, by adding together](./images/2-numbers-interacting.gif)
 
 We can interact with these numbers in `irb`. Start `irb` from the console. Then, to call up a number:
 
