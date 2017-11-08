@@ -67,7 +67,7 @@ Let's try this again with another number:
 
 What just happened? We went into the program world, and asked for the number 2. The world fetched the number 2, and **returned** it to us.
 
-<gif of irb executing code and the world retrieving and returning the number 2>
+![Requesting the number 2 from the command line, and the program retrieving it](./images/2-retrieving-a-number.gif)
 
 ## What doesn't exist inside a Ruby program?
 
