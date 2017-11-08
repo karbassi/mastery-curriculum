@@ -72,7 +72,9 @@ When I think of a program, I think of a flat world, with things happening inside
 
 For instance, let’s start with a program we all know: Microsoft Word. When we click on the ‘W’ icon to open Word, the following world comes into being inside your computer:
 
-<microsoft word gif (with entities)>
+![The Word world being created inside a computer, while someone clicks on 'Word'](./images/1-word-world.gif)
+
+> I'm using Apple's word processor, Pages – but it's basically the same as Word.
 
 This world contains objects. In Microsoft Word, some obvious examples of these objects might be things we can see:
 
