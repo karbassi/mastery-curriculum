@@ -1,5 +1,5 @@
 module Api
-  API_SERVER_HOST = "http://mastery_api.maryrosecook.com/"
+  API_SERVER_HOST = "http://67.205.138.167/"
 
   def self.get_quiz(student_quiz)
     get_request(API_SERVER_HOST,

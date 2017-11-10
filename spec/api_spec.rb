@@ -8,7 +8,7 @@ describe Api do
 
   describe "#get_quiz" do
     before(:each) do
-      stub_request(:get, /mastery_api.maryrosecook.com\/get_quiz/)
+      stub_request(:get, /67.205.138.167\/get_quiz/)
         .with(query: { chapter_number: student_quiz.chapter_number,
                        github_username: student_quiz.github_username,
                        quiz_number: student_quiz.quiz_number })
@@ -22,7 +22,7 @@ describe Api do
 
   describe "#submit_and_verify_quiz_answers" do
     before(:each) do
-      stub_request(:get, /mastery_api.maryrosecook.com\/mark_quiz/)
+      stub_request(:get, /67.205.138.167\/mark_quiz/)
         .with(query: { chapter_number: student_quiz.chapter_number,
                        github_username: student_quiz.github_username,
                        quiz_number: student_quiz.quiz_number })
