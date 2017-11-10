@@ -5,33 +5,40 @@ describe Api do
                              github_username: "maryrosecook",
                              chapter_number: "2",
                              quiz_number: "1") }
+  let :api_request_class { double(:api_request_class) }
+  let :request { double(:request) }
+  let :report { double(:report) }
 
-  describe "#get_quiz" do
-    before(:each) do
-      stub_request(:get, /67.205.138.167\/get_quiz/)
-        .with(query: { chapter_number: student_quiz.chapter_number,
-                       github_username: student_quiz.github_username,
-                       quiz_number: student_quiz.quiz_number })
-        .to_return(status: 200, body: "get quiz response", headers: {})
-    end
+  describe "::get_quiz" do
+    it "sends request and returns report" do
+      expect(request).to receive(:report).and_return(report)
+      expect(api_request_class)
+        .to receive(:new)
+        .with("/get_quiz",
+              { github_username: "maryrosecook",
+                chapter_number: "2",
+                quiz_number: "1"})
+        .and_return(request)
 
-    it "sends get_quiz request with quiz and student data, returns response" do
-      expect(Api.get_quiz(student_quiz)).to eq("get quiz response")
+      expect(described_class.get_quiz(student_quiz, api_request_class))
+        .to eq(report)
     end
   end
 
-  describe "#submit_and_verify_quiz_answers" do
-    before(:each) do
-      stub_request(:get, /67.205.138.167\/mark_quiz/)
-        .with(query: { chapter_number: student_quiz.chapter_number,
-                       github_username: student_quiz.github_username,
-                       quiz_number: student_quiz.quiz_number })
-        .to_return(status: 200, body: "submit quiz response", headers: {})
-    end
+  describe "::submit_and_verify_quiz_answers" do
+    it "sends request and returns report" do
+      expect(request).to receive(:report).and_return(report)
+      expect(api_request_class)
+        .to receive(:new)
+        .with("/mark_quiz",
+              { github_username: "maryrosecook",
+                chapter_number: "2",
+                quiz_number: "1"})
+        .and_return(request)
 
-    it "sends submit quiz request with quiz and student data, returns response" do
-      expect(Api.submit_and_verify_quiz_answers(student_quiz))
-        .to eq("submit quiz response")
+      expect(described_class.submit_and_verify_quiz_answers(
+               student_quiz, api_request_class))
+        .to eq(report)
     end
   end
 end
