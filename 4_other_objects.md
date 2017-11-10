@@ -1,16 +1,20 @@
 # Other objects
 
-We already know that when we start a Ruby program, some objects are made for us.
+We already know that when we start a Ruby program, some **objects** are made for us.
 
 <gif (from before) demonstarting program starting and some numbers coming into existence: zoom in on the numbers to show they exist>
 
-In [module 2](./2_variables_and_statements.md), we saw that numbers were ready and waiting for us whenever we set up the Ruby world. And, we assigned these pre-existent numbers to variables: in other words, we gave them programmer-friendly names.
+In [module 2](./2_variables_and_statements.md), we saw that numbers were ready and waiting for us whenever we set up the Ruby world. And, we **assigned** these pre-existent numbers to **variables**: in other words, we gave them programmer-friendly **names**.
 
-Numbers are one thing, but what other objects pre-exist in this world? And how do they come into being?
+In [module 3](./3_messages_and_interfaces.md), we found out that we could instruct objects to do things using **messages**. We learned that the list of messages we can send to an object is called its **interface**. We saw that you could make a good guess at what an object was, based on the **methods** defined on its interface.
+
+So far, we've mostly been working with one type of object: numbers. Numbers are one thing, but what other objects pre-exist in this world?
+
+And how do objects come into being, anyway?
 
 ## `CONSTANTS` don't change
 
-Some objects never change. In Ruby, we call these objects **Constants**. Constants are like regular names, with one exception: once we've assigned them, we can't assign them again.
+Some objects never change. In Ruby, we call these objects **Constants**. There are special rules for assigning names to constants: once we've assigned them, we can't assign them again.
 
 When we start the program world, some constants come into existence automatically. One of these is `RUBY_VERSION`.
 
@@ -29,11 +33,15 @@ When we start the program world, some constants come into existence automaticall
 </details>
 <p></p>
 
+> To tell Ruby that a particular object should never change (i.e. should be a constant), give it a name starting with a capital letter.
+
 ## `Classes` are gods
 
-Before there were numbers, there were the gods. Just like in our (depending on disposition) universe, these gods were responsible for creating all the objects that exist. And, they continue to be the main mechanism whereby new objects come into existence. Each god is responsible for creating a certain kind of object: 'their' object.
+Right before our universe made the numbers, it made the gods. 
 
-Just like in our (now mythically-embellished) universe, these 'gods' exist as objects inside the universe: and we can talk with them. In Ruby, these gods are called **Classes**. Objects these classes create are called **Instances** of that class.
+In our program, these gods are called **Classes**. They created all the objects that exist in the program. Each class – each god – is responsible for creating certain kind of objects: 'their' objects.
+
+Just like in myths from Ancient Greece, these 'gods' exist as objects inside the universe, and we can send them messages. Mostly, we send them messages asking them to create new objects in the program world. Objects created by these classes are called **Instances** of that class.
 
 > In Ruby, all classes start with a capital letter, putting them in the same naming category as constants. Why do you think this is? How constant are the gods?
 
@@ -54,19 +62,16 @@ The true answer is complex, but for now we'll take a shortcut: when we want to a
 
 ## Creating new objects in the world
 
-We, too, can send the message `new` to these classes. This is how we create new objects. A good candidate for trying this out with is the `String` class. Recall that an object is a program entity that:
-
-* Knows something about itself, and
-* Knows how to interact with other objects.
-
-The `String` class creates objects which: 
+We, too, can send the message `new` to these classes. This is how we create new objects. A good candidate for trying this out with is the `String` class. The `String` class creates objects which: 
 
 * Know about some text, and 
-* Know how to interact with other instances of `String`.
+* Know how to interact with other instances of the `String` class.
 
 > Somewhat frustratingly, we call instances of the `String` class 'strings'.
 
-For our todo app to work as advertised, we're going to need to store some text. We might even want to change that text around – perhaps capitalizing it if the user forgot to do so. So, we need an object that stores and can manipulate some text. What better object than an instance of `String`?
+There are many reasons we might want to store strings of text inside our programs. Remember our todo app: we want the user to be able to input text (a 'todo'), and retrieve it later. We might also want to manipulate that text: perhaps, to capitalize it if the user keeps forgetting to complete the todo.
+
+So, we need an object that stores and can manipulate some text. What better object than an instance of `String`?
 
 * _**Assign to the variable `todo_1` a new instance of `String`, with the text `"wash the dog"`.**_
 * _**Send the string referenced by `todo_1` a message to return its text, in uppercase.**_
@@ -112,5 +117,21 @@ So what happens if we get them confused?
 </details>
 <p></p>
 
-> There's one god to rule them all, though: `Object`. Ultimately, all classes are themselves instances of the `Object` class. Even the `main` object is an instance of the Object class. So if a monotheistic version of the program universe appeals to you, you could think of `Object` as being the 'one true' god entity in Ruby. Obviously, it's not very specialised – so it doesn't create objects that are very useful for us.
+> Notice that the interface of both instances of `String` and instances of `Integer` define methods for the message `+`. Notice, though, that `+` does quite different things in each case. What happens is specific to the object's purpose, and this is a conscious decision on the part of the program designer. More programmers want to stitch strings together (`"1" + "2"`) than want to add the numbers within those strings. So, Ruby designers chose to make the `+` method do different things for different objects.
+
+## Class and Instance interfaces
+
+Because Classes are different objects to Instances, they have different interfaces. For instance: `String` defines `new` on its interface. When called, `String.new` produces a new instance of `String`. This instance, however, does not define `new` on its interface, because it's not a class and so isn't responsible for creating new instances.
+
+* The methods defined on a class interface are called the `class methods`. 
+* The methods defined on an instance interface are called the `instance methods`.
+
+## More about the main object
+
+The Main Object is a special kind of instance: an instance of the `Object` class.
+
+- _**Use the `methods` message in IRB to list the methods on the main object.**_
+- _**Capture the main object's `object_id`.**_
+
+> Ultimately, all classes are themselves instances of the `Object` class. So if a monotheistic version of the program universe appeals to you, you could think of `Object` as being the 'one true' god entity in Ruby. Obviously, it's not very specialised – so it doesn't create objects that are very useful for us.
 
