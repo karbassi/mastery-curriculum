@@ -1,3 +1,6 @@
+require "uri"
+require "net/http"
+
 module Api
   API_SERVER_HOST = "http://67.205.138.167/"
 
