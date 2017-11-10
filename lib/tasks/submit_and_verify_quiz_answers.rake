@@ -1,4 +1,5 @@
 require_relative "../api"
+require_relative "../student_quiz"
 
 desc "Send your answers for a quiz so they can be verified as correct"
 task :submit_and_verify_quiz_answers do

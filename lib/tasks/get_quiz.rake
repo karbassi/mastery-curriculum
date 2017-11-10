@@ -1,4 +1,5 @@
 require_relative "../api"
+require_relative "../student_quiz"
 
 desc "Get a quiz, as long as you have verified all earlier quizzes"
 task :get_quiz do
