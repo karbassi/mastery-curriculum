@@ -157,12 +157,45 @@ And visually depicting what we're trying to do:
 * The methods defined on a class interface are called the `class methods`. 
 * The methods defined on an instance interface are called the `instance methods`.
 
-## More about the main object
+## Printing using the main object
 
-The Main Object is a special kind of instance: an instance of the `Object` class.
+The Main Object is a special kind of instance: an instance of the `Object` class. When we call methods in IRB without addressing a particular object, we're calling them on the Main Object.
 
 - _**Use the `methods` message in IRB to list the methods on the main object.**_
 - _**Capture the main object's `object_id`.**_
 
 > Ultimately, all classes are themselves instances of the `Object` class. So if a monotheistic version of the program universe appeals to you, you could think of `Object` as being the 'one true' god entity in Ruby. Obviously, it's not very specialised – so it doesn't create objects that are very useful for us.
+
+One of the useful purposes of the Main Object is to output information from the program. Defined on the interface of instances of `Object` is a method called `puts`. It stands for 'put string'. It can be used to print information from the program:
+
+```irb
+> puts String.new("I am being printed out!")
+I am being printed out!
+=> nil
+```
+
+<gif demonstrating the use of `puts`>
+
+## Putting it all together
+
+Let's build out the first part of our Todo app.
+
+- _**Start up IRB.**_
+- _**Define variables for three new instances of the `String` class: `todo_1`, `todo_2`, and `todo_3`. Each one should store some text with a todo item.**_
+- _**Create a pre-written world containing `todo_1`, `todo_2`, and `todo_3`, then print them immediately.**_
+
+You should be able to run:
+
+```bash
+$> irb -r ./todo.rb
+```
+
+And immediately see:
+
+```irb
+This is todo item 1
+This is todo item 2
+This is todo item 3
+>
+```
 
