@@ -45,14 +45,21 @@ Just like in myths from Ancient Greece, these 'gods' exist as objects inside the
 
 > In Ruby, all classes start with a capital letter, putting them in the same naming category as constants. Why do you think this is? How constant are the gods?
 
-One such 'god-like' object is the `Integer` class. 'Whole numbers', like 1, 2, and 5, are 'instances of the Integer class'. When we start `irb` and the numbers come into existence, they are created by this particular god. How does that happen?
+One such 'god-like' object is the `Integer` class. 'Whole numbers', like 1, 2, and 5, are 'instances of the Integer class'.
+
+> We call instances of the `Integer` class 'integers'. 
+
+When we start `irb` and the integers come into existence, they are created by this particular god. How does that happen?
 
 The true answer is complex, but for now we'll take a shortcut: when we want to ask a Ruby class to create an object, we send it the message `new`. So it's reasonable to think that, when the program world starts, Ruby does this sort of thing behind the scenes:
 
 ```ruby
 1 = Integer.new
+#=> 1
 2 = Integer.new
+#=> 2
 3 = Integer.new
+#=> 3
 # and so on
 ```
 
@@ -62,14 +69,19 @@ The true answer is complex, but for now we'll take a shortcut: when we want to a
 
 ## Creating new objects in the world
 
-We, too, can send the message `new` to these classes. This is how we create new objects. A good candidate for trying this out with is the `String` class. The `String` class creates objects which: 
+We, too, can send the message `new` to these classes. This is how we create new objects: new instances of that class. This process is called **instantiation**.
+
+A good candidate for trying out instantiation is the `String` class. The `String` class creates objects which: 
 
 * Know about some text, and 
 * Know how to interact with other instances of the `String` class.
 
-> Somewhat frustratingly, we call instances of the `String` class 'strings'.
+> We call instances of the `String` class 'strings'.
 
-There are many reasons we might want to store strings of text inside our programs. Remember our todo app: we want the user to be able to input text (a 'todo'), and retrieve it later. We might also want to manipulate that text: perhaps, to capitalize it if the user keeps forgetting to complete the todo.
+There are many reasons we might want to store strings of text inside our programs. For example: remember the Todo program: 
+
+- We want the user to be able to input text (a 'todo'), and retrieve it later. 
+- We might also want to manipulate that text: perhaps, to capitalize it (if the user keeps forgetting to complete the todo).
 
 So, we need an object that stores and can manipulate some text. What better object than an instance of `String`?
 
@@ -92,9 +104,13 @@ So, we need an object that stores and can manipulate some text. What better obje
 
 ## Different objects, different purposes
 
-Much of Ruby programming is about identifying the right class of object for a particular job. To that end, Ruby provides you some pretty multi-purpose classes, like `Integer` and `String`. Of course, they're quite different kinds of things. One understands (whole) numbers, and the other understands text. One knows how to interact with other numbers, the other knows how to interact with other text.
+Much of Ruby programming is about identifying the right class to create instances for a particular job. To that end, Ruby provides you a wide range of different classes, with different purposes: like `Integer` and `String`.
 
-So what happens if we get them confused?
+> In the next module, we'll meet a very useful class: `Array`.
+
+Of course, these classes create instances that have quite different purposes. `Integer` instances understand (whole) numbers, and `String` instances understand text. `Integer` instances (integers) know how to interact with other integers, and `String` instances (strings) know how to interact with other strings.
+
+Let's play around in IRB to demonstrate the difference in their purposes.
 
 * _**Assign to the variable `one_string` a new instance of `String`, with the text `"1"`.**_
 * _**Assign to the variable `two_string` a new instance of `String`, with the text `"2"`.**_
@@ -117,11 +133,26 @@ So what happens if we get them confused?
 </details>
 <p></p>
 
-> Notice that the interface of both instances of `String` and instances of `Integer` define methods for the message `+`. Notice, though, that `+` does quite different things in each case. What happens is specific to the object's purpose, and this is a conscious decision on the part of the program designer. More programmers want to stitch strings together (`"1" + "2"`) than want to add the numbers within those strings. So, Ruby designers chose to make the `+` method do different things for different objects.
+> Notice that the interfaces of both instances of `String` and instances of `Integer` define methods for the message `+`. Notice, though, that `+` does quite different things in each case. What happens is specific to the object's purpose, and this is a conscious decision on the part of the program designer. More programmers want to stitch strings together (`"1" + "2"`) than want to add the numbers within those strings. So, Ruby designers chose to make the `+` method do different things for different objects.
 
 ## Class and Instance interfaces
 
 Because Classes are different objects to Instances, they have different interfaces. For instance: `String` defines `new` on its interface. When called, `String.new` produces a new instance of `String`. This instance, however, does not define `new` on its interface, because it's not a class and so isn't responsible for creating new instances.
+
+```irb
+> string_instance = String.new("some words")
+=> "some words"
+> string_instance_instance = string_instance.new
+=> NoMethodError: undefined method `new' for "some words":String
+```
+
+Decomposing that error:
+
+<diagram of error decomposition>
+
+And visually depicting what we're trying to do:
+
+<gif showing calling #new on a class and on an object>
 
 * The methods defined on a class interface are called the `class methods`. 
 * The methods defined on an instance interface are called the `instance methods`.
