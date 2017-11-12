@@ -105,15 +105,18 @@ $ (e.g. rake get_quiz timmydev 1)
 
 ## Content overview
 
-#### Important concepts
+### Important concepts
+
 **important concepts or terminology** are in bold.
 
-#### Exercises and activities
+### Exercises and activities
+
 Instructions for you to do something (an activity or exercise) look like this:
 
 * _**An instruction for you**_
 
-#### Activity examples
+### Activity examples
+
 Activities are usually followed by a guide as to how I'd do it:
 
 <details>
@@ -127,7 +130,7 @@ There's usually some code to execute in here. You can't generally copy-paste it 
 </details>
 <p></p>
 
-#### Extensions or tangents
+### Extensions or tangents
 
 > If something isn't directly related, but might be interesting, provide context, or more information, it'll be in a blockquote (like this).
 
