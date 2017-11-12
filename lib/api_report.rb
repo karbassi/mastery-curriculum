@@ -9,18 +9,27 @@ class ApiReport
     "#{message}"
   end
 
-  def self.from_http_response(response)
-    return self.failure(response.message) if !response.ok?
-    new(:success, response.body)
-  end
-
-  def self.failure(failure_message)
-    new(:failed,
-        "Error: #{failure_message}\n" \
-        "Please report this error to maryrosecook.")
+  def self.build(response)
+    return self.error(response.to_s) if exception?(response)
+    return self.error(response.message) if !response.ok?
+    self.success(response.body)
   end
 
   private
+
+  def self.success(body)
+    new(:success, body)
+  end
+
+  def self.error(message)
+    new(:failed,
+        "Error: #{message}\n" \
+        "Please report this error to maryrosecook.")
+  end
+
+  def self.exception?(response)
+    response.is_a? Exception
+  end
 
   attr_reader :status, :message
 end

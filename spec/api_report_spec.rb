@@ -17,44 +17,46 @@ describe ApiReport do
     end
   end
 
-  describe "#from_http_response" do
-    context "http response not ok" do
-      let :http_response { double(:http_response, ok?: false, message: "Error") }
-      subject { described_class.from_http_response(http_response) }
+  describe "#build" do
+    context "http response" do
+      context "not ok" do
+        let :http_response { double(:http_response, ok?: false, message: "Error") }
+        subject { described_class.build(http_response) }
+
+        it "reports failure" do
+          expect(subject.to_s).to match(/Status: failed/)
+        end
+
+        it "reports message" do
+          expect(subject.to_s).to match(/Error/)
+        end
+      end
+
+      context "ok" do
+        let :http_response { double(:http_response, ok?: true, body: "Woo") }
+        subject { described_class.build(http_response) }
+
+        it "reports failure" do
+          expect(subject.to_s).to match(/Status: success/)
+        end
+
+        it "reports message" do
+          expect(subject.to_s).to match(/Woo/)
+        end
+      end
+    end
+
+    context "exception" do
+      let :failure_message { "Oh no" }
+      subject { described_class.build(Exception.new("Oh no")) }
 
       it "reports failure" do
         expect(subject.to_s).to match(/Status: failed/)
       end
 
       it "reports message" do
-        expect(subject.to_s).to match(/Error/)
+        expect(subject.to_s).to match(/Oh no/)
       end
-    end
-
-    context "http response ok" do
-      let :http_response { double(:http_response, ok?: true, body: "Woo") }
-      subject { described_class.from_http_response(http_response) }
-
-      it "reports failure" do
-        expect(subject.to_s).to match(/Status: success/)
-      end
-
-      it "reports message" do
-        expect(subject.to_s).to match(/Woo/)
-      end
-    end
-  end
-
-  describe "#failure" do
-    let :failure_message { "Oh no" }
-    subject { described_class.failure(failure_message) }
-
-    it "reports failure" do
-      expect(subject.to_s).to match(/Status: failed/)
-    end
-
-    it "reports message" do
-      expect(subject.to_s).to match(/Oh no/)
     end
   end
 end
