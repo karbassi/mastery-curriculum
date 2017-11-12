@@ -2,24 +2,17 @@ require "httparty"
 require_relative "./api_report"
 
 class ApiRequest
-  API_SERVER_HOST = "http://67.205.138.167/"
+  attr_reader :report
 
   def initialize(path, params, api_report_class=ApiReport)
     @path = path
     @params = params
-    @api_report_class = api_report_class
-  end
-
-  def report
-    response = make_request
-    if response.is_a? HTTParty::Response
-      api_report_class.from_http_response(response)
-    else
-      api_report_class.failure(response.to_s)
-    end
+    @report = api_report_class.build(make_request)
   end
 
   private
+
+  API_SERVER_HOST = "http://67.205.138.167/"
 
   def make_request
     begin
@@ -38,5 +31,5 @@ class ApiRequest
                         Net::HTTPHeaderSyntaxError,
                         Net::ProtocolError]
 
-  attr_reader :path, :params, :api_report_class
+  attr_reader :path, :params
 end

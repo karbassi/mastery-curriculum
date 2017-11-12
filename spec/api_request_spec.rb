@@ -4,30 +4,23 @@ describe ApiRequest do
   let :path { "/hi" }
   let :params { { a: "b" } }
   let :api_report_class { double(:api_report_class) }
+  let :api_report { double(:api_report) }
 
   describe "::new" do
-    subject { described_class.new(path, params, api_report_class) }
-
-    it "creates a new ApiRequest with a path and params" do
-      expect(subject).to_not be_nil
-    end
-  end
-
-  describe "#report" do
-    subject { described_class.new(path, params, api_report_class) }
-
     context "successful request" do
       before(:each) do
         stub_request(:get, /67.205.138.167\/hi/)
           .with(query: params).to_return(status: 200)
       end
 
-      it "creates ApiReport with the http response" do
+      it "creates and exposes report" do
         expect(api_report_class)
-          .to receive(:from_http_response)
-                .with(an_instance_of(HTTParty::Response))
+          .to receive(:build)
+          .with(an_instance_of(HTTParty::Response))
+          .and_return(api_report)
 
-        subject.report
+        subject = described_class.new(path, params, api_report_class)
+        expect(subject.report).to eq(api_report)
       end
     end
 
@@ -36,12 +29,14 @@ describe ApiRequest do
         stub_request(:get, /67.205.138.167\/hi/).with(query: params).to_timeout
       end
 
-      it "creates ApiReport failure with the exception message" do
+      it "creates and exposes report" do
         expect(api_report_class)
-          .to receive(:failure)
-          .with("execution expired")
+          .to receive(:build)
+          .with(an_instance_of(Net::OpenTimeout))
+          .and_return(api_report)
 
-        subject.report
+        subject = described_class.new(path, params, api_report_class)
+        expect(subject.report).to eq(api_report)
       end
     end
   end
