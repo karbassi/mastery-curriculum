@@ -35,7 +35,7 @@ $ bundle install
 
 3. When you've absorbed the content of the module thoroughly, [get the quiz](#get-a-quiz).
 
-4. Complete the quiz.  Instructions [here](#completing-a-quiz).
+4. Complete the quiz.  Instructions [here](#how-to-complete-a-quiz).
 
 5. If you get stuck and can't complete a quiz, contact @maryrosecook on Slack and she give you feedback to help you learn what you need to complete the quiz.
 
