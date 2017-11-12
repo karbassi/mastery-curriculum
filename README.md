@@ -103,7 +103,7 @@ $ rake get_quiz githubusername module-number
 $ (e.g. rake get_quiz timmydev 1)
 ```
 
-### Quick overview
+## Content overview
 
 #### Important concepts
 **important concepts or terminology** are in bold.
