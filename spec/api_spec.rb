@@ -30,7 +30,7 @@ describe Api do
       expect(request).to receive(:report).and_return(report)
       expect(api_request_class)
         .to receive(:new)
-        .with("/mark_quiz",
+        .with("/submit_and_verify_quiz_answers",
               { github_username: "maryrosecook",
                 chapter_number: "2",
                 quiz_number: "1"})

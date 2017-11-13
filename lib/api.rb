@@ -14,7 +14,7 @@ module Api
   def self.submit_and_verify_quiz_answers(student_quiz,
                                           api_request_class=ApiRequest)
     api_request_class
-      .new("/mark_quiz",
+      .new("/submit_and_verify_quiz_answers",
            { github_username: student_quiz.github_username,
              chapter_number: student_quiz.chapter_number,
              quiz_number: student_quiz.quiz_number })
