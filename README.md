@@ -136,11 +136,11 @@ There's usually some code to execute in here. You can't generally copy-paste it 
 
 ### Chapters
 
-1. [Hello World](./1_hello_world/README.md)
-1. [Variables and Statements](./2_variables_and_statements/README.md)
-1. [Messages and Interfaces](./3_messages_and_interfaces/README.md)
-1. [Other Objects](./4_other_objects/README.md) :construction:
-1. [Arrays](./5_arrays/README.md) :construction:
-1. [Procedures](./6_procedures/README.md) :construction:
-1. [Conditionals](./7_conditionals/README.md) :construction:
-1. [:question: Classes :question:](./8_maybe_classes/README.md) :construction:
+1. [Hello World](./chapter1/README.md)
+1. [Variables and Statements](./chapter2/README.md)
+1. [Messages and Interfaces](./chapter3/README.md)
+1. [Other Objects](./chapter4/README.md) :construction:
+1. [Arrays](./chapter5/README.md) :construction:
+1. [Procedures](./chapter6/README.md) :construction:
+1. [Conditionals](./chapter7/README.md) :construction:
+1. [:question: Classes :question:](./chapter8/README.md) :construction:
