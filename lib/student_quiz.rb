@@ -31,6 +31,6 @@ class StudentQuiz
   end
 
   def quiz_number_valid?(quiz_number)
-    quiz_number.to_i > 0
+    quiz_number.to_i == 1
   end
 end

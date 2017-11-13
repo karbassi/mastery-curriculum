@@ -41,6 +41,13 @@ describe StudentQuiz do
                                      quiz_number: "woo")}
           .to raise_error(/Invalid quiz number: woo/)
       end
+
+      it "raises if quiz_number greater than 1" do
+        expect { described_class.new(github_username: "maryrosecook",
+                                     chapter_number: "2",
+                                     quiz_number: "3")}
+          .to raise_error(/Invalid quiz number: 3/)
+      end
     end
   end
 end
