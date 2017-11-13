@@ -9,9 +9,14 @@ task :submit_and_verify_quiz_answers do
     exit
   end
 
-  puts Api.submit_and_verify_quiz_answers(
-         StudentQuiz.new(github_username: ARGV[1],
-                         chapter_number: ARGV[2],
-                         quiz_number: ARGV[3]))
+  begin
+    puts Api.submit_and_verify_quiz_answers(
+           StudentQuiz.new(github_username: ARGV[1],
+                           chapter_number: ARGV[2],
+                           quiz_number: ARGV[3]))
+  rescue Exception => e
+    puts e.message
+  end
+
   exit
 end

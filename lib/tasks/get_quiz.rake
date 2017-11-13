@@ -9,8 +9,13 @@ task :get_quiz do
     exit
   end
 
-  puts Api.get_quiz(StudentQuiz.new(github_username: ARGV[1],
-                                    chapter_number: ARGV[2],
-                                    quiz_number: ARGV[3]))
+  begin
+    puts Api.get_quiz(StudentQuiz.new(github_username: ARGV[1],
+                                      chapter_number: ARGV[2],
+                                      quiz_number: ARGV[3]))
+  rescue Exception => e
+    puts e.message
+  end
+
   exit
 end
