@@ -29,19 +29,19 @@ $ bundle install
 
 ## Instructions
 
-1. Work through the numbered modules (beginning with `/1_hello_world`).
+1. Work through the numbered chapters (beginning with `/1_hello_world`).
 
-2. Work through a module.
+2. Work through a chapter.
 
-3. When you've absorbed the content of the module thoroughly, [get the quiz](#get-a-quiz).
+3. When you've absorbed the content of the chapter thoroughly, [get the quiz](#get-a-quiz).
 
 4. Complete the quiz.  Instructions [here](#how-to-complete-a-quiz).
 
 5. If you get stuck and can't complete a quiz, contact @maryrosecook on Slack and she give you feedback to help you learn what you need to complete the quiz.
 
-6. Once the quiz is complete, continue to the next module.
+6. Once the quiz is complete, continue to the next chapter.
 
-Your aim is to get through all the modules, but you only move on from a module once you've completed the quiz.
+Your aim is to get through all the chapters, but you only move on from a chapter once you've completed the quiz.
 
 ## How to complete a quiz
 
@@ -89,7 +89,7 @@ $ rspec
 
 ```
 $ cd path/to/root/of/repo
-$ rake submit_and_verify_quiz_answers github-username module-number quiz-number
+$ rake submit_and_verify_quiz_answers github-username chapter-number quiz-number
 $ (e.g. rake submit_and_verify_quiz_answers timmydev 1 1)
 ```
 
@@ -99,7 +99,7 @@ $ (e.g. rake submit_and_verify_quiz_answers timmydev 1 1)
 
 ```
 $ cd path/to/root/of/repo
-$ rake get_quiz githubusername module-number quiz-number
+$ rake get_quiz githubusername chapter-number quiz-number
 $ (e.g. rake get_quiz timmydev 1 1)
 ```
 
@@ -134,7 +134,7 @@ There's usually some code to execute in here. You can't generally copy-paste it 
 
 > If something isn't directly related, but might be interesting, provide context, or more information, it'll be in a blockquote (like this).
 
-### Modules
+### Chapters
 
 1. [Hello World](./1_hello_world/README.md)
 1. [Variables and Statements](./2_variables_and_statements/README.md)
