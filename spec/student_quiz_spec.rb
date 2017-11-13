@@ -1,10 +1,10 @@
 require "student_quiz"
 
 describe StudentQuiz do
-  describe "#build" do
     subject { StudentQuiz.new(github_username: "maryrosecook",
                               chapter_number: "2",
                               quiz_number: "1") }
+  describe "::new" do
 
     it "exposes github_username" do
       expect(subject.github_username).to eq("maryrosecook")
