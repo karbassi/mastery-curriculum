@@ -13,7 +13,7 @@ describe ApiReport do
     subject { described_class.new(:success, "Woo!") }
 
     it "reports the status and message" do
-      expect(subject.to_s).to eq("Status: success\nWoo!")
+      expect(subject.to_s).to eq("API communication: success\nWoo!")
     end
   end
 
@@ -24,7 +24,7 @@ describe ApiReport do
         subject { described_class.build(http_response) }
 
         it "reports failure" do
-          expect(subject.to_s).to match(/Status: failed/)
+          expect(subject.to_s).to match(/API communication: failed/)
         end
 
         it "reports message" do
@@ -37,7 +37,7 @@ describe ApiReport do
         subject { described_class.build(http_response) }
 
         it "reports failure" do
-          expect(subject.to_s).to match(/Status: success/)
+          expect(subject.to_s).to match(/API communication: success/)
         end
 
         it "reports message" do
@@ -51,7 +51,7 @@ describe ApiReport do
       subject { described_class.build(Exception.new("Oh no")) }
 
       it "reports failure" do
-        expect(subject.to_s).to match(/Status: failed/)
+        expect(subject.to_s).to match(/API communication: failed/)
       end
 
       it "reports message" do

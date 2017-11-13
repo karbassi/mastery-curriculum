@@ -5,7 +5,7 @@ class ApiReport
   end
 
   def to_s
-    "Status: #{status}\n" \
+    "API communication: #{status}\n" \
     "#{message}"
   end
 
