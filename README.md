@@ -89,8 +89,8 @@ $ rspec
 
 ```
 $ cd path/to/root/of/repo
-$ rake submit_and_verify_quiz_answers github-username module-number
-$ (e.g. rake submit_and_verify_quiz_answers timmydev 1)
+$ rake submit_and_verify_quiz_answers github-username module-number quiz-number
+$ (e.g. rake submit_and_verify_quiz_answers timmydev 1 1)
 ```
 
 ### Get a quiz
@@ -99,8 +99,8 @@ $ (e.g. rake submit_and_verify_quiz_answers timmydev 1)
 
 ```
 $ cd path/to/root/of/repo
-$ rake get_quiz githubusername module-number
-$ (e.g. rake get_quiz timmydev 1)
+$ rake get_quiz githubusername module-number quiz-number
+$ (e.g. rake get_quiz timmydev 1 1)
 ```
 
 ## Content overview
